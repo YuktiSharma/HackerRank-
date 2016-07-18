@@ -1,0 +1,46 @@
+class Student extends Person{
+	private int[] testScores;
+    Student(String fname,String lname,int id,int[] s)
+        {
+        super(fname,lname,id);
+        testScores=s;
+    }
+    char calculate()
+        {
+     int sum=0;
+        int avg;
+        int l=testScores.length;
+        for(int i=0;i<l;i++)
+            {
+            sum = sum + testScores[i];
+        }
+        avg = sum/l;
+        char a;
+        if(avg>=90&& avg<=100)
+            {
+            a= 'O';
+        }
+        else if(avg>=80 && avg<=90)
+            {
+            a = 'E';
+        }
+        else if(avg>=70 && avg<=80)
+            {
+            a = 'A';
+        }
+        else if(avg >=55 && avg <=70)
+            {
+            a = 'P';
+        }
+        else if(avg>=40 && avg<=55)
+            {
+            a ='D';
+        }
+        else
+            {
+            a ='T';
+        }
+        return a;
+    }
+}
+      
