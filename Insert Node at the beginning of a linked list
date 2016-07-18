@@ -1,0 +1,21 @@
+
+  struct Node
+  {
+     int data;
+     struct Node *next;
+  }
+
+//function for  Insert Node at the begining of a linked list 
+Node* Insert(Node *head,int data)
+{
+ Node *newno=new Node();
+    newno->data=data;
+    newno->next=NULL;
+    if(head==NULL)
+        {
+return newno;
+    }
+    newno->next=head;
+    head=newno;
+    return head;
+}
