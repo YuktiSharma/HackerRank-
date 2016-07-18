@@ -1,0 +1,25 @@
+/*
+  struct Node
+  {
+     int data;
+     struct Node *next;
+  }
+*/
+// function to add at tail
+Node* Insert(Node *head,int data)
+{
+ Node *newnode = new Node();
+    newnode->data=data;
+    newnode->next=NULL;
+   if(head==NULL)
+       {
+       return newnode;
+   }
+    Node *p=head;
+    while(p->next!=NULL)
+        {
+        p=p->next;
+    }
+    p->next=newnode;
+    return head;
+}
