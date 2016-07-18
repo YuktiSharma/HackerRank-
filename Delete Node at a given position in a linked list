@@ -1,0 +1,26 @@
+
+  Node is defined as 
+  struct Node
+  {
+     int data;
+     struct Node *next;
+  }
+//Delete Node at a given position in a linked list 
+Node* Delete(Node *head, int position)
+{
+  // Complete this method
+    Node *P=head;
+    Node *Del;
+    if(position==0)
+        {
+        head=head->next;
+    }
+    else
+        {
+        for(int i=1;i<position;i++)
+            P=P->next;
+        Del=P->next;
+        P->next=Del->next;
+    }
+    return head;
+}
