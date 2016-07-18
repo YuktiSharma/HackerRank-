@@ -1,0 +1,40 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main(){
+    int t;
+    cin >> t;
+    for(int a0 = 0; a0 < t; a0++){
+        int n;
+        cin >> n;
+       if(n==0)
+           {
+           cout<<"1\n";
+       }
+        else if(n==1)
+            {
+            cout<<"2\n";
+        }
+        else{
+            int r,q,h=1;
+            q=n/2;
+            r=n%2;
+            for(int i=0;i<q;i++)
+                {
+                h=h*2;
+                h=h+1;
+            }
+            for(int k=0;k<r;k++)
+                {
+                h=h*2;
+            }
+            cout<<h<<"\n";
+        }
+    }
+    return 0;
+}
