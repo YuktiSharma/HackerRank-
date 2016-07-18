@@ -1,0 +1,31 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main(){
+int t;
+    cin>>t;
+    for(int i=0;i<t;i++)
+        {
+       int n ;
+        cin>>n;
+        int orig = n;
+        int count=0;
+        while(orig>0)
+            {
+            
+            int r = orig%10;
+            orig = orig/10;
+            if (r==1)
+                count++;
+            if(r>1 && n%r==0)
+                    count++;
+            
+        }
+        cout<<count<<endl;
+    }
+    return 0;
+}
